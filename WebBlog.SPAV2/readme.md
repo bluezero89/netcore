@@ -1,8 +1,8 @@
-Build react app sample
+Build webblog spa 
 (React + webpack + babel)
 Run command: 
     npm install
     npm run build
     npm start
 
-    (http://localhost:3001/)
+    (http://localhost:5001/)
