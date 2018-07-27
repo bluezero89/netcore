@@ -1,5 +1,6 @@
 ﻿using IdentityServer4;
 using IdentityServer4.Models;
+using Microsoft.Extensions.Configuration;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -9,6 +10,8 @@ namespace WebBlog.Auth
 {
     public class Config
     {
+        public IConfiguration Configuration { get; }
+
         public static IEnumerable<IdentityResource> GetIdentityResources()
         {
             return new List<IdentityResource>
@@ -45,9 +48,20 @@ namespace WebBlog.Auth
                         new Secret("T2iHoangWebBlog@123!".Sha256())
                     },
 
-                    RedirectUris           = { "https://sd2169.azurewebsites.net/callback" },
-                    PostLogoutRedirectUris = { "https://sd2169.azurewebsites.net/" },
-                    AllowedCorsOrigins = { "https://sd2169.azurewebsites.net" },
+                    RedirectUris           = { 
+                        "http://localhost:5000/callback",
+                        "https://ui-webblog.azurewebsites.net/callback"
+                    },
+
+                    PostLogoutRedirectUris = {
+                        "http://localhost:5000",
+                        "https://ui-webblog.azurewebsites.net"
+                    },
+
+                    AllowedCorsOrigins = {
+                        "http://localhost:5000",
+                        "https://ui-webblog.azurewebsites.net"
+                    },
                     //AllowedCorsOrigins = { "http://localhost:5000" },
                     
                     AllowedScopes = {

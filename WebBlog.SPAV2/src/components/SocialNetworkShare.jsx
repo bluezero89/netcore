@@ -55,16 +55,16 @@ export class SocialNetworkShare extends React.Component {
                  EnableWhatsappShare:true,
                  EnableLinkedInShare:true,
                  EnablePinterestShare:true,
-                 EnableVKShare:false,
+                 EnableVKShare:true,
                  EnableOdnoklassnikiShare:false,
-                 EnableRedditShare:true,
+                 EnableRedditShare:false,
                  EnableTumblrShare:false,
                  EnableMailRuShare:true,
                  EnableLiveJournalShare:true,
                  EnableViberShare:true,
                  EnableEmailShare:true,
         
-                 EnableSharedCounter:true
+                 EnableSharedCounter:false
             }
         }
     }

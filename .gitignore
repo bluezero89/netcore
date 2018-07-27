@@ -2,8 +2,7 @@
 # This .gitignore file was automatically created by Microsoft(R) Visual Studio.
 ################################################################################
 
-/.vs/WebBlog/v15/Server/sqlite3/storage.ide-shm
-/.vs/WebBlog/v15/Server/sqlite3/storage.ide-wal
+/.vs/*
 /WebBlog/wwwroot/Articles/Uploaded/*
 /WebBlog/bin/*
 /WebBlog/obj/*
@@ -14,6 +13,7 @@
 /WebBlog.Auth/bin/*
 /WebBlog.Auth/obj/*
 /WebBlog.Database/bin/*
+/WebBlog.Database/obj/*
 /WebBlog.Common/bin/*
 /WebBlog.Common/obj/*
 /WebBlog.Services/bin/*

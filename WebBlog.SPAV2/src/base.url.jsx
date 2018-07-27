@@ -2,7 +2,6 @@ import { environment } from './environments/environment';
 
 export const BaseUrl = {
     BASE_URL: environment.serviceAPI,
-    BASE_URL: environment.serviceAPI,
     AUTH_URL: environment.authAPI,
     HOME_URL: environment.clientURL + '/',
     ARTICLE_DETAIL_URL: environment.clientURL + '/article/:articleId',

@@ -89,6 +89,7 @@ export class Article extends React.Component {
 	render() {
 		let shareUrl = BaseUrl.ARTICLE_URL + "/" + this.props.match.params.articleId ? this.props.match.params.articleId : 0;
 		let mediaFile = this.state.article?this.state.article.image:'';
+		let title = this.state.article?this.state.article.Title:'WebBlog'
 		return (
 			<div>
 
@@ -106,7 +107,7 @@ export class Article extends React.Component {
 				
 				<div className="row">
 					<div className="col-xs-12 text-right">
-						<SocialNetworkShare title='WebBlog' shareUrl={shareUrl} mediaFile={mediaFile} />
+						<SocialNetworkShare mediaFile={mediaFile} title={title} />
 					</div>
 				</div>
 
@@ -143,7 +144,7 @@ export class Article extends React.Component {
 						// return <Comment comment={comment} key={index} />;
 						return (
 							<div className="media mb-4" key={index}>
-								<img className="d-flex mr-3 rounded-circle" src="http://placehold.it/50x50" alt="" />
+								<img className="d-flex mr-3 rounded-circle user-avatar" src="/images/unknown-user.png" alt="" />
 								<div className="media-body">
 									<h5 className="mt-0">{comment.createdBy ? comment.createdBy : ''}</h5>
 									{comment.content ? comment.content : ''}

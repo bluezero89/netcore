@@ -5,9 +5,9 @@
 The architecture of project was based on the common N-Layers architecture for web development (https://docs.microsoft.com/en-us/dotnet/standard/modern-web-apps-azure-architecture/common-web-application-architectures)
 
 Demo:
-- WebBlog.SPA was deployed to azure site (https://sd2169.azurewebsites.net) (Account: enduser - Pass: User@123) 
-- WebBlog (WebBlog management) was deployed to google cloud platform (https://admin-webblog.appspot.com) (Account: admin.webblog@gmail.com - Pass: Admin@123)
-- WebBlog.Api (Api WebBlog) was also deployed to google cloud platform (https://api-webblog.appspot.com/swagger/index.html)
+- WebBlog.SPA was deployed to azure site (https://ui-webblog.azurewebsites.net) (Account: enduser - Pass: User@123) 
+- WebBlog (WebBlog management) was deployed to google cloud platform (https://admin-webblog.azurewebsites.net) (Account: admin.webblog@gmail.com - Pass: Admin@123)
+- WebBlog.Api (Api WebBlog) was also deployed to google cloud platform (https://api-webblog.azurewebsites.net/swagger/index.html)
 
 Because I deploy to Google Cloud, hence I used MySql provider of entity framework. With the security reasons, I set authorized to access to My SQL instance with trust IP addresses.
 If you want to run Web project (WebBlog, WebBlog.Api, WebBlog.Auth) as your localhost. Please use SQLite provider.
@@ -56,3 +56,13 @@ dotnet ef migrations add InitialIdentityModel --context ApplicationDbContext -p 
 		npm start
 	
 	(url: http://localhost:5000)
+	
+5/I built the client SPAV2 with technologies: (React + webpack + babel). 
+	
+	Open a command promt in the Web SPA folder (~\WebBlog\WebBlog.SPAV2) and execute the following commands:
+		
+		npm install 
+		npm run-script build
+		npm start
+	
+	(url: http://localhost:5001)
