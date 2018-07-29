@@ -1,13 +1,14 @@
 {
   "runtimeTarget": {
     "name": ".NETCoreApp,Version=v2.0",
-    "signature": "d9033b5cca352e30fc418e21e0d6df0c768e839b"
+    "signature": "86a062ac6f695f109b50d8949c1e6b958f65bfbe"
   },
   "compilationOptions": {},
   "targets": {
     ".NETCoreApp,Version=v2.0": {
       "WebBlog.Services/1.0.0": {
         "dependencies": {
+          "Microsoft.AspNetCore.All": "2.0.6",
           "WebBlog.Common": "1.0.0",
           "WebBlog.Database": "1.0.0"
         },
@@ -203,6 +204,7 @@
           "Microsoft.EntityFrameworkCore.SqlServer": "2.0.2",
           "Microsoft.EntityFrameworkCore.Sqlite": "2.0.2",
           "Microsoft.EntityFrameworkCore.Sqlite.Core": "2.0.2",
+          "Microsoft.EntityFrameworkCore.Tools": "2.0.2",
           "Microsoft.Extensions.Caching.Abstractions": "2.0.1",
           "Microsoft.Extensions.Caching.Memory": "2.0.1",
           "Microsoft.Extensions.Caching.Redis": "2.0.1",
@@ -1327,6 +1329,11 @@
         },
         "runtime": {
           "lib/netstandard2.0/Microsoft.EntityFrameworkCore.SqlServer.dll": {}
+        }
+      },
+      "Microsoft.EntityFrameworkCore.Tools/2.0.2": {
+        "dependencies": {
+          "Microsoft.EntityFrameworkCore.Design": "2.0.2"
         }
       },
       "Microsoft.Extensions.Caching.Abstractions/2.0.1": {
@@ -3953,6 +3960,13 @@
       "sha512": "sha512-368mmlJFauVm1ICn+plKJNm6KSX2jRTuK3zwomZwDAlzxO5kr8MMmbr60e6QM68wk8u0bdQBzTwO7GzfEnzWLA==",
       "path": "microsoft.entityframeworkcore.sqlserver/2.0.2",
       "hashPath": "microsoft.entityframeworkcore.sqlserver.2.0.2.nupkg.sha512"
+    },
+    "Microsoft.EntityFrameworkCore.Tools/2.0.2": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-GBgyVDSZhYwja4cy+muVBocjlgbLhV5m29J3tHHf02utM8zo1jDSuarDGKV0O+kj5d3bgBuHe+0/Tf78GanTHQ==",
+      "path": "microsoft.entityframeworkcore.tools/2.0.2",
+      "hashPath": "microsoft.entityframeworkcore.tools.2.0.2.nupkg.sha512"
     },
     "Microsoft.Extensions.Caching.Abstractions/2.0.1": {
       "type": "package",

@@ -266,7 +266,7 @@
           "lib/netcoreapp2.0/_._": {}
         },
         "build": {
-          "build/netcoreapp2.0/_._": {}
+          "build/netcoreapp2.0/Microsoft.AspNetCore.All.targets": {}
         }
       },
       "Microsoft.AspNetCore.Antiforgery/2.0.2": {
@@ -1040,7 +1040,7 @@
           "Microsoft.AspNetCore.Mvc.RazorPages": "2.0.3"
         },
         "build": {
-          "build/netstandard2.0/_._": {}
+          "build/netstandard2.0/Microsoft.AspNetCore.Mvc.Razor.ViewCompilation.targets": {}
         }
       },
       "Microsoft.AspNetCore.Mvc.RazorPages/2.0.3": {
@@ -1749,6 +1749,18 @@
           "lib/netstandard2.0/Microsoft.EntityFrameworkCore.SqlServer.dll": {}
         }
       },
+      "Microsoft.EntityFrameworkCore.Tools/2.0.2": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.EntityFrameworkCore.Design": "2.0.2"
+        },
+        "compile": {
+          "lib/netstandard2.0/_._": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/_._": {}
+        }
+      },
       "Microsoft.Extensions.Caching.Abstractions/2.0.1": {
         "type": "package",
         "dependencies": {
@@ -1930,7 +1942,7 @@
           "lib/netstandard2.0/Microsoft.Extensions.Configuration.UserSecrets.dll": {}
         },
         "build": {
-          "build/netstandard2.0/_._": {}
+          "build/netstandard2.0/Microsoft.Extensions.Configuration.UserSecrets.targets": {}
         }
       },
       "Microsoft.Extensions.Configuration.Xml/2.0.1": {
@@ -6146,6 +6158,29 @@
         "lib/netstandard2.0/Microsoft.EntityFrameworkCore.SqlServer.xml",
         "microsoft.entityframeworkcore.sqlserver.2.0.2.nupkg.sha512",
         "microsoft.entityframeworkcore.sqlserver.nuspec"
+      ]
+    },
+    "Microsoft.EntityFrameworkCore.Tools/2.0.2": {
+      "sha512": "GBgyVDSZhYwja4cy+muVBocjlgbLhV5m29J3tHHf02utM8zo1jDSuarDGKV0O+kj5d3bgBuHe+0/Tf78GanTHQ==",
+      "type": "package",
+      "path": "microsoft.entityframeworkcore.tools/2.0.2",
+      "files": [
+        "lib/netstandard2.0/_._",
+        "microsoft.entityframeworkcore.tools.2.0.2.nupkg.sha512",
+        "microsoft.entityframeworkcore.tools.nuspec",
+        "tools/EntityFrameworkCore.PowerShell2.psd1",
+        "tools/EntityFrameworkCore.PowerShell2.psm1",
+        "tools/EntityFrameworkCore.psd1",
+        "tools/EntityFrameworkCore.psm1",
+        "tools/about_EntityFrameworkCore.help.txt",
+        "tools/init.ps1",
+        "tools/install.ps1",
+        "tools/net461/ef.exe",
+        "tools/net461/ef.exe.config",
+        "tools/net461/ef.x86.exe",
+        "tools/net461/ef.x86.exe.config",
+        "tools/netcoreapp2.0/ef.dll",
+        "tools/netcoreapp2.0/ef.runtimeconfig.json"
       ]
     },
     "Microsoft.Extensions.Caching.Abstractions/2.0.1": {
@@ -12529,6 +12564,7 @@
   },
   "projectFileDependencyGroups": {
     ".NETCoreApp,Version=v2.0": [
+      "Microsoft.AspNetCore.All >= 2.0.6",
       "Microsoft.NETCore.App >= 2.0.0",
       "WebBlog.Common >= 1.0.0",
       "WebBlog.Database >= 1.0.0"
@@ -12582,6 +12618,10 @@
     "frameworks": {
       "netcoreapp2.0": {
         "dependencies": {
+          "Microsoft.AspNetCore.All": {
+            "target": "Package",
+            "version": "[2.0.6, )"
+          },
           "Microsoft.NETCore.App": {
             "suppressParent": "All",
             "target": "Package",

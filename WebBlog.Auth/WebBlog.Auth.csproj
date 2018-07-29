@@ -25,6 +25,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\WebBlog.Database\WebBlog.Database.csproj" />
+    <ProjectReference Include="..\WebBlog.Services\WebBlog.Services.csproj" />
   </ItemGroup>
 
 </Project>

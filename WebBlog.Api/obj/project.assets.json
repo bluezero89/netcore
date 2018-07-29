@@ -5247,6 +5247,7 @@
         "type": "project",
         "framework": ".NETCoreApp,Version=v2.0",
         "dependencies": {
+          "Microsoft.AspNetCore.All": "2.0.6",
           "WebBlog.Common": "1.0.0",
           "WebBlog.Database": "1.0.0"
         },

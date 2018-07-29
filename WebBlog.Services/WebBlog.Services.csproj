@@ -1,9 +1,13 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
     <TargetFramework>netcoreapp2.0</TargetFramework>
   </PropertyGroup>
 
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.All" Version="2.0.6" />
+  </ItemGroup>
+  
   <ItemGroup>
     <ProjectReference Include="..\WebBlog.Common\WebBlog.Common.csproj" />
     <ProjectReference Include="..\WebBlog.Database\WebBlog.Database.csproj" />
